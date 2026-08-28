@@ -231,3 +231,7 @@ footer{padding:60px 0 40px;color:var(--body);font-size:.88rem}
   .pstat .n{font-size:2rem}
   .big-quote .mark{font-size:3.4rem}
 }
+@media(max-width:880px){
+  .has-dropdown:hover .dropdown,
+  .has-dropdown:focus-within .dropdown{transform:none}
+}
