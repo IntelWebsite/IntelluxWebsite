@@ -192,3 +192,42 @@ footer{padding:60px 0 40px;color:var(--body);font-size:.88rem}
 @media(max-width:880px){
   .path-card{border-right:none;border-bottom:1px solid var(--line)}
 }
+
+/* ============================================================
+   MOBILE — hamburger nav + phone-size polish
+   ============================================================ */
+.nav-toggle{display:none;background:none;border:none;font-size:1.5rem;color:var(--forest);cursor:pointer;padding:6px 10px;line-height:1}
+
+@media(max-width:880px){
+  /* --- hamburger menu panel --- */
+  .nav-toggle{display:block}
+  .nav-inner{height:66px}
+  .logo-img{height:34px}
+  .nav-links{position:absolute;top:100%;left:0;right:0;background:var(--cream);border-bottom:1px solid var(--line);box-shadow:0 24px 40px rgba(18,58,94,.14);flex-direction:column;align-items:stretch;gap:0;padding:8px 22px 22px;display:none}
+  .nav-links.open{display:flex}
+  .nav-links li:not(:last-child){display:block}
+  .nav-links li{width:100%}
+  .nav-links a{display:block;padding:14px 4px;font-size:1rem;border-bottom:1px dashed var(--line)}
+  .nav-links a.btn{margin-top:14px;text-align:center;border-bottom:none}
+
+  /* services dropdown becomes a tap-to-open accordion */
+  .dropdown{position:static;transform:none;min-width:0;border:none;box-shadow:none;background:var(--cream-2);border-radius:8px;padding:4px 8px;opacity:1;visibility:visible;pointer-events:auto;display:none;transition:none}
+  .has-dropdown.open .dropdown{display:grid}
+  .has-dropdown.open .caret{transform:rotate(180deg)}
+  .dropdown a{white-space:normal;border-bottom:none;padding:11px 10px;font-size:.92rem}
+
+  /* --- breathing room on small screens --- */
+  .container{padding:0 20px}
+  section{padding:64px 0}
+  .hero{padding:72px 0 64px}
+  .svc-hero{padding:48px 0 40px}
+  .svc-body,.philo-grid{gap:40px}
+  .plan,.path-card,.reach-block{padding:36px 26px}
+  .reach-row{flex-direction:column;gap:16px}
+  .foot{flex-direction:column;gap:28px}
+  .copy{flex-direction:column;gap:6px;text-align:center}
+  .hero-ctas .btn{flex:1 1 100%;max-width:340px;text-align:center}
+  .pstat{padding:28px 22px}
+  .pstat .n{font-size:2rem}
+  .big-quote .mark{font-size:3.4rem}
+}
