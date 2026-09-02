@@ -1,10 +1,19 @@
 /* ============================================================
    INTELLUX PAYROLL & ACCOUNTING — MAIN JAVASCRIPT
-   ============================================================
-   
    ============================================================ */
 
-
+// Scroll-reveal animation. Any element with class="reveal" fades/slides in when scrolled into view.
+const io = new IntersectionObserver(
+  (entries) =>
+    entries.forEach((e) => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        io.unobserve(e.target);
+      }
+    }),
+  { threshold: 0.12 }
+);
+document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
 
 // Mobile nav toggle — hamburger button reveals the full nav-links list.
 document.querySelectorAll('nav').forEach((navEl) => {
